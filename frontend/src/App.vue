@@ -5,8 +5,10 @@
     </header>
     <div class="content">
       <div class="left">
-        <!-- 基础信息栏 -->
-        <BasicInformation />
+        基础信息栏
+        <!-- <BasicInformation /> -->
+        <!-- <Radar /> -->
+        <Radar :corCop="corCop" :key="view3Component"></Radar>
       </div>
       <div class="middle">
         <div class="middle-top">散点图</div>
@@ -18,13 +20,22 @@
 </template>
 
 <script>
-import BasicInformation from './components/BasicInformation.vue';
+// import BasicInformation from './components/BasicInformation/BasicInformation.vue';
+import Radar from './components/basicInformation/radar.vue';
+
 
 export default {
   name: 'App',
   components: {
-    BasicInformation,
+    // BasicInformation,
+    Radar,
   },
+  data () {
+    return {
+      corCop: 4,
+      view3Component: 0
+    }
+  }
 };
 </script>
 
